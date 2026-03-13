@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+:root {
+  --background: #fbf8f4;
+  --foreground: #1e2226;
+  --canvas-1: #f7ecdf;
+  --canvas-2: #d8ecf4;
+  --canvas-3: #f4d6cc;
+  --panel: #fffaf3;
+  --panel-stroke: #e3d5c4;
+  --accent: #cb5a3d;
+  --accent-strong: #9f3f28;
+  --muted: #6a6d70;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-space-grotesk);
+  --font-serif: var(--font-newsreader);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-space-grotesk), sans-serif;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+  background:
+    radial-gradient(circle at 10% 5%, color-mix(in srgb, var(--canvas-1) 75%, transparent), transparent 40%),
+    radial-gradient(circle at 92% 12%, color-mix(in srgb, var(--canvas-2) 65%, transparent), transparent 36%),
+    radial-gradient(circle at 85% 85%, color-mix(in srgb, var(--canvas-3) 70%, transparent), transparent 34%);
+}
+
+.app-panel {
+  background: color-mix(in srgb, var(--panel) 90%, #ffffff);
+  border: 1px solid var(--panel-stroke);
+  border-radius: 1rem;
+  box-shadow: 0 10px 40px rgba(102, 75, 45, 0.08);
+}
+
+.app-title {
+  font-family: var(--font-newsreader), serif;
+  letter-spacing: 0.02em;
+}
+
+.muted {
+  color: var(--muted);
+}
