@@ -1,6 +1,6 @@
 # TowerOfJoy
 
-TowerOfJoy is an LDR planner for couples with Jira-style activity tracking, shared calendar planning, and memory journaling with photos.
+TowerOfJoy is a planner App
 
 ## Current MVP Foundation
 
